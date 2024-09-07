@@ -1,0 +1,199 @@
+:root {
+  /* Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  /* Colors */
+  --primary-moderate-violet: hsl(263, 55%, 52%);
+  --primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --primary-white: hsl(0, 0%, 100%);
+
+  --neutral-light-gray: hsl(0, 0%, 81%);
+  --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Text Colors */
+  --text-verified-graduate-opacity: rgba(217, 19%, 35%, 0.5);
+  --text-review-paragraph-opacity: rgba(217, 19%, 35%, 0.7);
+
+  /* Typography */
+  --font-size-body: 13px;
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-family: var(--font-family);
+  background-color: var(--neutral-light-grayish-blue);
+}
+
+.testemonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 70%;
+  max-height: 60%;
+}
+
+.testemoial-card {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: aqua;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 1.75rem;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-avatar {
+  display: inline;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+
+.user-name-container {
+  display: inline-block;
+}
+
+.user-name-container span {
+  display: block;
+}
+
+.testemoial-card .user-name-container .user-name {
+  font-weight: var(--font-weight-600);
+}
+
+.testemoial-card .user-name-container .badge {
+  font-weight: var(--font-weight-500);
+}
+
+.testemoial-card .user-name-container .badge {
+  color: var(--neutral-light-gray);
+  font-size: 0.7rem;
+}
+
+.patrick .user-name,
+.patrick .testemonial-heading,
+.daniel .user-name,
+.daniel .testemonial-heading,
+.jonathan .user-name,
+.jonathan .testemonial-heading {
+  color: var(--primary-white);
+}
+
+.patrick .badge,
+.patrick .testemonial,
+.daniel .badge,
+.daniel .testemonial,
+.jonathan .badge,
+.jonathan .testemonial {
+  color: var(--neutral-light-gray);
+  font-weight: var(--font-weight-500);
+}
+
+.testemoial-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.testemoial-card .testemonial {
+  margin-bottom: 0;
+}
+
+.daniel {
+  grid-row: 1;
+  grid-column: span 2;
+  background-color: var(--primary-moderate-violet);
+}
+
+.jonathan {
+  background-color: var(--primary-very-dark-grayish-blue);
+}
+
+.kira {
+  grid-row: span 2;
+  grid-column: 4;
+}
+.jeanette,
+.kira {
+  background-color: var(--primary-white);
+}
+
+.jeanette .testemonial-heading,
+.kira .testemonial-heading {
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+.jeanette .testemonial,
+.kira .testemonial {
+  color: var(--neutral-light-gray);
+  font-weight: var(--font-weight-500);
+}
+
+.patrick {
+  grid-column: span 2;
+  background-color: var(--primary-very-dark-blackish-blue);
+}
+
+.daniel .user-avatar,
+.patrick .user-avatar {
+  border: 2px solid hsl(263, 66%, 74%);
+}
+
+@media screen and (max-width: 450px) {
+  .testemonials {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !;
+    max-width: 85%;
+    height: auto;
+  }
+
+  body {
+    height: 100%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  .testemoial-card {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  .daniel {
+    grid-row: 1;
+  }
+
+  .jonathan {
+    grid-row: 2;
+  }
+
+  .jeanette {
+    grid-row: 3;
+  }
+
+  .patrick {
+    grid-row: 4;
+  }
+
+  .kira {
+    grid-row: 5;
+  }
+}
