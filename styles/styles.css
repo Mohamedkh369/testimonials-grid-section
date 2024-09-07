@@ -1,6 +1,6 @@
 :root {
   /* Layout */
-  --mobile-width: 375px;
+  --mobile-width: 450pxpx;
   --desktop-width: 1440px;
 
   /* Colors */
@@ -122,6 +122,9 @@ body {
   grid-row: 1;
   grid-column: span 2;
   background-color: var(--primary-moderate-violet);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 0;
 }
 
 .jonathan {
